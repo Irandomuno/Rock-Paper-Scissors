@@ -14,10 +14,14 @@
             return choices[Math.floor(Math.random() * choices.length)];
         } 
         function  playRound(playerSelection, computerSelection) {
+            playerSelection.toUpperCase();
             return `You chosed ${playerSelection}, ` + "You Lose! Paper beats Rock";
         }
+
         const playerSelection = "rock";
         const computerSelection = getComputerChoice();
+        
+        
     </script>
     
 </body>
