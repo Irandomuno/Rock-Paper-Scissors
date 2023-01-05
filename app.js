@@ -19,21 +19,20 @@ function  playRound(playerSelection, computerSelection) {
         compScore++;
         return `You Lost! ${computerSelection} beats ${playerSelection}`;
     }
-}
+} 
 
 function game() {
     for (let i = 0; i < 5; i++) {
     const playerSelection = prompt("Choose your weapon", "rock, paper, or scissors").toLocaleLowerCase();
     const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
-
-        if (playerSelection > computerSelection) {
-            return "You beat the computer!";
-        } else if (playerSelection < computerSelection) {
-            return "You got beat by the computer!";
-        } else {
-            return "Wow! what a match, you both tied!";
-        }
+    }
+    if (playerScore > compScore) {
+        return "You beat the computer!";
+    } else if (playerScore < compScore) {
+        return "You got beat by the computer!";
+    } else {
+        return "Wow! what a match, you both tied!";
     }
 }
 console.log(game());
