@@ -25,7 +25,8 @@ function game() {
     for (let i = 0; i < 5; i++) {
     const playerSelection = prompt("Choose your weapon", "rock, paper, or scissors").toLocaleLowerCase();
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("-------");
     }
     if (playerScore > compScore) {
         return "You beat the computer!";
